@@ -1,0 +1,428 @@
+/* ==========================================================
+   BASIC SETUP & TYPOGRAPHY
+   ========================================================== */
+
+.about-me {
+    font-style:italic;
+    font-size:large;
+    text-align: justify;
+}
+
+
+:root {
+    --primary-color: #007BFF; /* Biru cerah untuk tautan dan aksen */
+    --secondary-color: #343a40; /* Abu-abu gelap untuk teks utama */
+    --background-color: #f8f9fa; /* Latar belakang halaman yang terang */
+    --card-background: #ffffff; /* Latar belakang artikel/section */
+    --hover-color: #e9ecef; /* Warna saat mouse hover */
+    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --footer-bg: #212529; /* Latar belakang footer gelap */
+    --footer-text: #adb5bd; /* Warna teks footer */
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid var(--hover-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Sedikit lebih gelap dari primary-color */
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   HEADER & NAVIGATION
+   ========================================================== */
+
+header {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+/* ==========================================================
+   MAIN CONTENT & SECTIONS
+   ========================================================== */
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+/* --- SECTION: TENTANG SAYA --- */
+#tentang {
+    text-align: center;
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+#tentang img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--primary-color);
+}
+
+/* --- ARTICLE POSTS --- */
+#artikel-terbaru {
+    padding: 0; /* Hapus padding section untuk merapikan kartu artikel */
+}
+
+.post {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--primary-color);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek hover untuk artikel */
+.post:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--hover-color);
+}
+
+.meta-info {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* --- SECTION: KONTAK --- */
+#kontak ul {
+    list-style: none;
+    padding: 0;
+}
+
+#kontak ul li {
+    margin-bottom: 10px;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* ==========================================================
+   RESPONSIVENESS (Mobile First)
+   ========================================================== */
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    #tentang {
+        padding: 30px 20px;
+    }
+}
+
+.judul {
+    font-size: 30px;
+    list-style-type: none;
+    text-align: left;
+}
+
+.atc-1 {
+    text-align: justify;
+    font-size: 18px;
+    font-style:italic
+}
+
+.atc-12 {
+   text-align: justify;
+   font-size: 18px;
+   font-style:italic
+}
+
+.atc-13 {
+    text-align: justify;
+    font-size: 18px;
+    font-style:italic
+}
+
+.atc-14 {
+    text-align: justify;
+    font-size: 18px;
+    font-style:italic
+}
+
+.lit-f {
+    list-style-type: none;
+    display:flex;
+
+}
+
+.tjn{
+    font-size:medium;
+    list-style: none;
+}
+
+.a-1 {
+    font-weight: bold;
+}
+
+.fin{
+    color: #adb5bd;
+}
+
+.mnf {
+    font-weight: bold;
+}
+
+.cut {
+    font-weight: bold;
+}
+
+.bj-1 {
+    font-weight: bold;
+}
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .card {
+      justify-content: center;
+      align-items:center;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      width: 1000px;
+      padding: 30px;
+      
+      
+    }
+
+    .card:hover {
+      
+    }
+
+    .card h2 {
+      font-size: 18px;
+      color: #1a202c;
+      margin-bottom: 6px;
+    }
+
+    .card h3 {
+      font-size: 14px;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #333;
+      margin: 6px 0;
+      line-height: 1.4;
+    }
+
+    .highlight {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .navbar {
+        font-size: smaller;
+    }
+
+    .card {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 18px;
+    max-width: 720px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    margin: 12px 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.6;
+    
+  }
+
+  .card h2 {
+    margin: 0 0 6px 0;
+    font-size: 1.35rem;
+  }
+
+  .card h3 {
+    margin: 0 0 12px 0;
+    font-weight: 500;
+    color: #555;
+    font-size: 1rem;
+  }
+
+  .card .synopsis-title {
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    margin: 8px 0;
+    color: #333;
+  }
+
+  .card ul {
+    margin: 8px 0 0 1.1rem;
+  }
+
+  .takeaways li {
+    margin-bottom: 6px;
+  }
+
+  .meta {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+  .cta {
+    display: inline-block;
+    margin-top: 14px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #2b7cff;
+    color: #2b7cff;
+    font-weight: 600;
+  }
+
+  .card-0 {
+    background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  padding: 18px;
+  max-width: 720px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+  margin: 12px auto;   /* auto = pusat horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.6;
+  }
+
+  .gambar-1{
+    height: 200px;
+    weight:200px;
+  }
